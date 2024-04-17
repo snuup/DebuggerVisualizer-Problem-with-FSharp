@@ -8,12 +8,12 @@ using Microsoft.VisualStudio.Extensibility.DebuggerVisualizers;
 using Microsoft.VisualStudio.RpcContracts.RemoteUI;
 
 [VisualStudioContribution]
-internal class IntVisualizerProvider : DebuggerVisualizerProvider
+internal class StringVisualizerProvider : DebuggerVisualizerProvider
 {
     /// <inheritdoc/>
     public override DebuggerVisualizerProviderConfiguration DebuggerVisualizerProviderConfiguration => new(
-        visualizerDisplayName: "int visualizer",
-        targetType: typeof(System.Int32))
+        visualizerDisplayName: "striny visualizer 1704",
+        targetType: typeof(String))
     {
         //VisualizerObjectSourceType = new VisualizerObjectSourceType(typeof(MemoryStreamVisualizerObjectSource)),
         Style = VisualizerStyle.ToolWindow,
@@ -22,6 +22,6 @@ internal class IntVisualizerProvider : DebuggerVisualizerProvider
     /// <inheritdoc/>
     public override Task<IRemoteUserControl> CreateVisualizerAsync(VisualizerTarget visualizerTarget, CancellationToken cancellationToken)
     {
-        return Task.FromResult<IRemoteUserControl>(new IntVisualizerUserControl(visualizerTarget));
+        return Task.FromResult<IRemoteUserControl>(new StringVisualizerUserControl(visualizerTarget));
     }
 }

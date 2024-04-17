@@ -1,14 +1,19 @@
 ﻿
-//var n = 123;
-var ms = new MemoryStream();
-ms.Write([10, 2, 3, 4, 5, 100, 1]);
+var s1 = "s1 from c#";
+var s2 = "s2 from c#";
 
-var a = new ModuleF.AA();
+var s3 = ModuleF.f();
 
-// Console.WriteLine(a.Name);
-
-ms = ModuleF.f();
+var s4 = CS.f();
 
 System.Diagnostics.Debugger.Break();
 
-// debugger visualizer opens for n (yet it fails because the control is not seriously implemented)
+class CS
+{
+    public static string f ()
+    {
+        var s1 = "bugs";
+        var s2 = s1 + " bunny";
+        return s2;
+    }
+}

@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
+
     <PropertyGroup>
         <TargetFramework>net8.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -6,12 +7,16 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="StringVisualizerUserControl.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="StringVisualizerUserControl.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.VisualStudio.Extensibility.Sdk" Version="17.9.2092" />
         <PackageReference Include="Microsoft.VisualStudio.Extensibility.Build" Version="17.9.2092" />
     </ItemGroup>
 
-    <ItemGroup>
-        <None Update="IntVisualizerUserControl.xaml" />
-        <EmbeddedResource Include="IntVisualizerUserControl.xaml" />
-    </ItemGroup>
 </Project>
